@@ -80,5 +80,6 @@ input[type='text'] {
 .country-list {
   list-style: none;
   display: flex;
+
   flex-direction: column-reverse;
 }
