@@ -33,18 +33,34 @@ function onMurkupListCountry(countryArr) {
     .join('');
 }
 export function markupCountry(res) {
-  if (res.length > 10) {
-    return Notiflix.Notify.info(
-      'Too many matches found. Please enter a more specific name.'
-    );
-  } else if (res.length === 1) {
-    onMarkupOneCountry(res);
-    refs.countryList.innerHTML = '';
-  } else {
-    onMurkupListCountry(res);
-    refs.infoCountry.innerHTML = '';
+  switch (res.length) {
+    case '>10':
+      return Notiflix.Notify.info(
+        'Too many matches found. Please enter a more specific name.'
+      );
+      break;
+    case '=== 1':
+      onMarkupOneCountry(res);
+      refs.countryList.innerHTML = '';
+      break;
+    default:
+      onMurkupListCountry(res);
+      refs.infoCountry.innerHTML = '';
+      break;
   }
 }
+// Умова через else if
+// if (res.length > 10) {
+//   return Notiflix.Notify.info(
+//     'Too many matches found. Please enter a more specific name.'
+//   );
+// } else if (res.length === 1) {
+//   onMarkupOneCountry(res);
+//   refs.countryList.innerHTML = '';
+// } else {
+//   onMurkupListCountry(res);
+//   refs.infoCountry.innerHTML = '';
+// }
 
 //
 //  <p  class="country-info__><span class ="country-info__performance">Currency symbol:</span>${country.currencies.symbol}</p>
