@@ -16,7 +16,6 @@ refs.inputNameCountry.addEventListener(
 function onCreateCountry(event) {
   let name = event.target.value.trim();
   if (name === '') {
-    console.log(name);
     refs.infoCountry.innerHTML = '';
     refs.countryList.innerHTML = '';
     return;
