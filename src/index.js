@@ -16,7 +16,6 @@ refs.inputNameCountry.addEventListener(
 function onCreateCountry(event) {
   let name = event.target.value.trim();
   if (name === '') {
-    console.log(123);
     refs.infoCountry.innerHTML = '';
     refs.countryList.innerHTML = '';
     return;
@@ -32,3 +31,13 @@ function onCreateCountry(event) {
       );
     });
 }
+
+// refs.liCountry
+//   .addClass('.country-list__item')
+//   .addEventListener('click', event => {
+//     listCountry = event.target.elements.value;
+//     console.log(listCountry);
+//     if (listCountry) {
+//       markupCountry();
+//     }
+//   });
