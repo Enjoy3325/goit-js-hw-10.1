@@ -2,7 +2,7 @@ import { fetchCountries } from './js/fetchCountries';
 import { markupCountry } from './js/markup';
 import { refs } from './js/refs';
 
-import Notiflix from 'notiflix';
+// import Notiflix from 'notiflix';
 import debounce from 'lodash.debounce';
 // import './css/styles.css';
 import './sass/_example.scss';
@@ -26,9 +26,9 @@ function onCreateCountry(event) {
       markupCountry(res);
     })
     .catch(error => {
-      return Notiflix.Notify.failure(
-        'Oops, there is no country with that name'
-      );
+      // return Notiflix.Notify.failure(
+      //   'Oops, there is no country with that name'
+      // );
     });
 }
 
